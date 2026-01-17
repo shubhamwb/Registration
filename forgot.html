@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forgot Password</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="login-container">
+        <h2>Forgot Password</h2>
+        <p style="margin-bottom: 15px; font-size: 14px; color: #555;">
+            Enter your registered email address and we’ll send you instructions.
+        </p>
+
+        <form onsubmit="showMessage(event)">
+            <input type="email" placeholder="Email address" required>
+            <button type="submit">Reset Password</button>
+        </form>
+
+        <div class="options">
+            <p><a href="index.html">Back to Login</a></p>
+        </div>
+
+        <p id="message" style="margin-top: 15px; color: green; display: none;">
+            If this email exists, password reset instructions have been sent.
+        </p>
+    </div>
+
+    <script>
+        function showMessage(event) {
+            event.preventDefault();
+            document.getElementById("message").style.display = "block";
+        }
+    </script>
+</body>
+</html>
